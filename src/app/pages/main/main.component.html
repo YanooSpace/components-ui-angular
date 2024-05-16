@@ -1,0 +1,14 @@
+<app-header></app-header>
+
+<main class="p-[2rem]">
+    <section class="grid grid-cols-5 gap-[1.5rem]">
+        @for (component of componentList; track $index) {
+            <button [class]="componentBox">
+                <p>{{ component.id}}</p>
+                <img src="assets/icons/{{ component.imageUrl }}"
+                class="w-full h-[5rem] bg-white">
+                <p>{{ component.title }}</p>
+            </button>
+        }
+    </section>
+</main>
