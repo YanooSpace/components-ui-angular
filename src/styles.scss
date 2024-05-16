@@ -1,3 +1,8 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+/* Tailwind */
+@import 'theme/tailwind.scss';
+
+/* Fonts */
+@import 'theme/font.scss';
+
+/* Reset */
+@import 'theme/initialize.scss';
