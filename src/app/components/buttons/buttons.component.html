@@ -1,0 +1,11 @@
+<div class="w-full flex flex-row">
+    <aside class="w-[10rem] h-[100vh] flex flex-col gap-2 bg-slate-100 text-center py-[2rem]">
+        @for (button of buttonList; track $index) {
+            <button>{{ button }}</button>
+        }
+    </aside>
+    <section class="flex flex-col flex-1 py-[2rem] gap-[1rem]">
+            <app-button01></app-button01>
+            <app-button02></app-button02>
+    </section>
+</div>

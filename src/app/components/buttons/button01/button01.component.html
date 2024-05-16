@@ -1,0 +1,12 @@
+<div class="flex flex-col justify-center w-full space-y-[1rem] px-5">
+    <figure class="flex justify-center items-center text-center py-[2rem] h-[15rem] relative bg-slate-600 rounded-[1rem]">
+        <button (click)="viewContent()" class="text-[1.2rem] bg-slate-200 px-3 py-1 rounded-[.5rem]">option</button>
+        @if (visible) {
+                <div [class]="modal">
+                        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry</p>
+                        <button (click)="viewContent()" class="bg-blue-300 px-6 py-1 rounded-full">닫기</button>
+                </div>
+        }
+    </figure>
+        <p class="text-[1.2rem] font-medium">button A</p>
+</div>
