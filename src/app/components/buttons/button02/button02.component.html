@@ -1,10 +1,24 @@
-<div class="flex flex-col justify-center w-full space-y-[1rem] px-5">
-    <figure class="flex justify-center items-center text-center py-[2rem] h-[15rem] relative bg-slate-600 rounded-[1rem]">
-        <button class="text-[1.2rem] bg-slate-200 px-3 py-1 rounded-[.5rem]">option</button>
-        <div>
-            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry</p>
-            <button class="bg-blue-300 px-6 py-1 rounded-full">닫기</button>
-        </div>
+<article class="flex flex-col justify-center w-full space-y-[1rem] px-5">
+    <figure
+        class="flex justify-center items-center text-center py-[2rem] h-[15rem] relative bg-slate-600 rounded-[1rem]">
+        <button (click)="onLoading()" [disabled]="isLoading"
+            class="text-[1.2rem] bg-slate-200 px-3 py-1 rounded-[.5rem]">
+            <ng-container>
+                @if (!isLoading) {
+                <button>전송</button>
+                }@else {
+                <button>로딩중...</button>
+                }
+            </ng-container>
+        </button>
+        <ng-container>
+            @if(isVisible) {
+            <div [class]="modal">
+                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry</p>
+                <button (click)="toggleButton()" class="bg-blue-300 px-6 py-1 rounded-full">닫기</button>
+            </div>
+            }
+        </ng-container>
     </figure>
-    <p class="text-[1.2rem] font-medium">button B</p>
-</div>
+    <p class="text-[1.2rem] font-medium">Loading Button</p>
+</article>

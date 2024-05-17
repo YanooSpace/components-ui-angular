@@ -14,6 +14,6 @@ import { Button02Component } from './button02/button02.component';
 })
 export class ButtonsComponent {
 
-  buttonList:string[] = ['buttonA'] 
+  buttonList:string[] = ['buttonA', 'buttonB'] 
 
 }
