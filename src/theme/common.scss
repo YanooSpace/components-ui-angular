@@ -1,0 +1,54 @@
+.common-button {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 0.5rem;
+    width: 100%;
+    padding: 0 1.25rem;
+}
+.common-button figure {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding : 2rem 0;
+    height: 15rem;
+    position: relative;
+    background-color: #31394C;
+    border-radius: 1rem;
+}
+.common-button button {
+    font-size: 1.2rem;
+    background-color: #EFF1F5;
+    padding: 0.25rem 0.75rem;
+    border-radius:.5rem;
+}
+.common-button button:hover {
+    background-color: #E9BDCF;
+}
+.common-button p {
+    padding-left: 0.5rem;
+    font-size: 1.2rem;
+    font-weight: 500;
+}
+
+.button-modal {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 0.75rem;
+    padding: 1rem;
+    background: white;
+    border: 1px solid #EFF1F5;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 1rem;
+}
+.button-modal p {
+    font-size: 1rem;
+    line-height: 1.4rem;
+    font-weight: 400;
+}
