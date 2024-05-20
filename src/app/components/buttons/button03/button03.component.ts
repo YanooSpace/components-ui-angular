@@ -31,18 +31,26 @@ import { Component, ElementRef, ViewChild, signal } from '@angular/core';
 })
 export class Button03Component {
 
+  // 템플릿 내에서 fileInput 요소를 참조하기 위해@viewChild 데코레이터를 사용한다
   @ViewChild('fileInput') fileInput?: ElementRef
 
+  // 파일 내용과 타입을 저장하기 위한 signal을 선언
   fileContent = signal<string | ArrayBuffer | null>(null);
   fileType = signal<string | null>(null);
 
+  /**
+   * 파일이 선택되었을 때 호출되는 메서드
+   * @param event 
+   */
   onFileSelected(event: Event) {
     const input = event.target as HTMLInputElement;
 
+    // 파일이 선택된 경우
     if (input.files && input.files.length > 0) {
       const file: File = input.files[0];
       const reader = new FileReader();
       
+      // 파일의 타입을 저장
       this.fileType.set(file.type)
 
       reader.onload = (e) => {
