@@ -5,29 +5,7 @@ import { Component, ElementRef, EventEmitter, Input, Output, ViewChild, signal }
   standalone: true,
   imports: [],
   templateUrl: './button03.component.html',
-  styles: `
-  .file-upload-container {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    margin-top: 20px;
-    position: absolute;
-    left: 50%;
-    top: 40%;
-    transform: translate(-50%, -50%)
-  }
-
-  pre {
-    background-color: white;
-    padding: 10px;
-    border: 1px solid #ddd;
-    border-radius: 4px;
-    margin-top: 20px;
-    white-space: pre-wrap; /* Enable line breaks */
-  }
-  
-  `
+  styleUrl: './button03.component.scss'
 })
 export class Button03Component {
 
@@ -71,6 +49,11 @@ export class Button03Component {
   onUpload() {
     const fileInpt = this.fileInput?.nativeElement
     fileInpt.click();
+  }
+
+  removeFile(){
+    this.fileContent.set(null);
+    this.fileType.set(null);
   }
 
 }
