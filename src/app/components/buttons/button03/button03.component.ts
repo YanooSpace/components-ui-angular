@@ -1,5 +1,4 @@
-import { HttpClient } from '@angular/common/http';
-import { Component, ElementRef, ViewChild, signal } from '@angular/core';
+import { Component, ElementRef, EventEmitter, Input, Output, ViewChild, signal } from '@angular/core';
 
 @Component({
   selector: 'app-button03',
@@ -39,7 +38,8 @@ export class Button03Component {
   fileContent = signal<string | ArrayBuffer | null>(null);
   fileType = signal<string | null>(null);
 
-  constructor(private http: HttpClient) {}
+  // 파일 업로드 이벤트를 외부로 전파하기 위한 EventEmitter를 정의
+  @Output() fileUploaded = new EventEmitter<File>();
 
   /**
    * 파일이 선택되었을 때 호출되는 메서드
@@ -58,24 +58,14 @@ export class Button03Component {
         const result = e.target?.result;
         if (typeof result === 'string' || result instanceof ArrayBuffer) {
           this.fileContent.set(result);
-          this.uploadFile(file)
+          // 파일이 로드되면 fileUploaded 이벤트를 발생
+          this.fileUploaded.emit(file);
         }
       };
 
       reader.readAsDataURL(file);
 
     }
-  }
-
-  // 이 부분이 범용성있는 데이터가 되어야 함ㄴ
-  uploadFile(file: File) {
-    const formData = new FormData();
-    formData.append('file', file, file.name);
-
-    this.http.post('http://localhost:3000/uploads', formData).subscribe({
-      next: (response) => console.log('업로드 성공', response),
-      error: (error) => console.log('업로드 실패', error)
-      });
   }
 
   onUpload() {

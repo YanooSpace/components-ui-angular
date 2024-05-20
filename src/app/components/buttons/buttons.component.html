@@ -7,6 +7,6 @@
     <section class="flex flex-col flex-1 py-[2rem] gap-[1.5rem]">
             <app-button01></app-button01>
             <app-button02></app-button02>
-            <app-button03>Upload</app-button03>
+            <app-button03 (fileUploaded)="handleFileUpload($event)">Upload</app-button03>
     </section>
 </section>
