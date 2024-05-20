@@ -1,3 +1,4 @@
+import { HttpClient } from '@angular/common/http';
 import { Component, ElementRef, ViewChild, signal } from '@angular/core';
 
 @Component({
@@ -38,6 +39,8 @@ export class Button03Component {
   fileContent = signal<string | ArrayBuffer | null>(null);
   fileType = signal<string | null>(null);
 
+  constructor(private http: HttpClient) {}
+
   /**
    * 파일이 선택되었을 때 호출되는 메서드
    * @param event 
@@ -45,25 +48,33 @@ export class Button03Component {
   onFileSelected(event: Event) {
     const input = event.target as HTMLInputElement;
 
-    // 파일이 선택된 경우
     if (input.files && input.files.length > 0) {
       const file: File = input.files[0];
       const reader = new FileReader();
       
-      // 파일의 타입을 저장
       this.fileType.set(file.type)
 
       reader.onload = (e) => {
         const result = e.target?.result;
         if (typeof result === 'string' || result instanceof ArrayBuffer) {
           this.fileContent.set(result);
+          this.uploadFile(file)
         }
       };
 
       reader.readAsDataURL(file);
 
     }
+  }
 
+  uploadFile(file: File) {
+    const formData = new FormData();
+    formData.append('file', file, file.name);
+
+    this.http.post('http://localhost:3000/uploads', formData).subscribe({
+      next: (response) => console.log('업로드 성공', response),
+      error: (error) => console.log('업로드 실패', error)
+      });
   }
 
   onUpload() {
