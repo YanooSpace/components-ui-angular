@@ -67,6 +67,7 @@ export class Button03Component {
     }
   }
 
+  // 이 부분이 범용성있는 데이터가 되어야 함ㄴ
   uploadFile(file: File) {
     const formData = new FormData();
     formData.append('file', file, file.name);
