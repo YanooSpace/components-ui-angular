@@ -20,7 +20,7 @@ export class ButtonsComponent {
 
   constructor(private baseURL: HttpClient) {}
 
-  // fileUploaded 이벤트를 처리하는 메서드s
+  // fileUploaded 이벤트를 처리하는 메서드
   handleFileUpload(file: File) {
     // const formData = new FormData();
     // formData.append('file', file, file.name);
