@@ -1,12 +1,9 @@
-<article class="common-button">
-        <p>Open Modal</p>
-        <figure>
-                <button (click)="toggleButton()">option</button>
-                @if (isVisible) {
-                <div class="button-modal">
-                        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry</p>
-                        <button (click)="toggleButton()">닫기</button>
-                </div>
-                }
-        </figure>
-</article>
+<button (click)="toggleButton()">
+        <ng-content></ng-content>
+</button>
+@if (isVisible) {
+<div class="button-modal">
+        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry</p>
+        <button (click)="toggleButton()">닫기</button>
+</div>
+}

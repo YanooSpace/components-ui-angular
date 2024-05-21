@@ -1,4 +1,4 @@
-.common-button {
+.common-box {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -6,7 +6,7 @@
     width: 100%;
     padding: 0 1.25rem;
 }
-.common-button figure {
+.common-box figure {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -17,16 +17,16 @@
     background-color: #31394C;
     border-radius: 1rem;
 }
-.common-button button {
+.common-box button {
     font-size: 1.2rem;
     background-color: #EFF1F5;
     padding: 0.25rem 0.75rem;
     border-radius:.5rem;
 }
-.common-button button:hover {
+.common-box button:hover {
     background-color: #E9BDCF;
 }
-.common-button p {
+.common-box p {
     padding-left: 0.5rem;
     font-size: 1.2rem;
     font-weight: 500;

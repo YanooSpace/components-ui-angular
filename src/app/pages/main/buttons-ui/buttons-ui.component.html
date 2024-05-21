@@ -1,0 +1,14 @@
+<section class="w-full h-full flex flex-row">
+    <app-aside [items]="buttonList"></app-aside>
+    <section class="flex flex-col flex-1 py-[2rem] gap-[1.5rem]">
+        <common-box [title]="buttonList[0]">
+            <app-button01>Modal</app-button01>
+        </common-box>
+        <common-box [title]="buttonList[1]">
+            <app-button02>Loading</app-button02>
+        </common-box>
+        <common-box [title]="buttonList[2]">
+            <app-button03 (fileUploaded)="handleFileUpload($event)">Upload</app-button03>
+        </common-box>
+    </section>
+</section>

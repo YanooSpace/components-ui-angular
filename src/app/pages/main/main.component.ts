@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { RouterLink  } from '@angular/router';
 import { HeaderComponent } from '../../components/header/header.component';
+
 import { CType } from '../../interface/component-type.interface';
 import { MOCK_CMT } from '../../data/MOCK_CMT';
 
@@ -9,7 +10,7 @@ import { MOCK_CMT } from '../../data/MOCK_CMT';
   standalone: true,
   imports: [
     RouterLink,
-    HeaderComponent
+    HeaderComponent,
   ],
   templateUrl: './main.component.html',
   styles: `

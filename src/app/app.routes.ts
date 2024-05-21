@@ -7,11 +7,11 @@ export const routes: Routes = [
     },
     {
         path: 'main',
-        loadComponent: () => import('./pages/main/main.component').then(m => m.MainComponent)
+        loadComponent: () => import('./pages/main/main.component').then(m => m.MainComponent),
     },
     {
-        path: 'buttons',
-        loadComponent: () => import('./components/buttons/buttons.component').then(m => m.ButtonsComponent)
+        path: 'buttons-ui',
+        loadComponent: () => import('./pages/main/buttons-ui/buttons-ui.component').then(m => m.ButtonsUiComponent)
     },
     {
         path: '**',

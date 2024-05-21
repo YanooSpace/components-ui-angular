@@ -1,22 +1,17 @@
-<article class="common-button">
-    <p>Loading Button</p>
-    <figure>
-        <button (click)="onLoading()" [disabled]="isLoading">
-            <ng-container>
-                @if (!isLoading) {
-                <button>전송</button>
-                }@else {
-                <button>로딩중...</button>
-                }
-            </ng-container>
-        </button>
-        <ng-container>
-            @if(isVisible) {
-            <div class="button-modal">
-                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry</p>
-                <button (click)="toggleButton()">닫기</button>
-            </div>
-            }
-        </ng-container>
-    </figure>
-</article>
+<button (click)="onLoading()" [disabled]="isLoading">
+    <ng-container>
+        @if (!isLoading) {
+        <button><ng-content></ng-content></button>
+        }@else {
+        <button>로딩중...</button>
+        }
+    </ng-container>
+</button>
+<ng-container>
+    @if(isVisible) {
+    <div class="button-modal">
+        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry</p>
+        <button (click)="toggleButton()">닫기</button>
+    </div>
+    }
+</ng-container>

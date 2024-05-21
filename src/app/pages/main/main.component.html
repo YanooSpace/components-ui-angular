@@ -5,7 +5,7 @@
         @for (component of componentList; track $index) {
             <button [class]="componentBox" [routerLink]="component.route">
                 <p>{{ component.id}}</p>
-                <img src="assets/icons/{{ component.imageUrl }}" class="w-full h-[5rem] bg-white">
+                <img src="assets/icons/{{ component.imageUrl }}.png" class="w-full h-[5rem] bg-white">
                 <p>{{ component.title }}</p>
             </button>
         }

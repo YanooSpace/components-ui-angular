@@ -1,25 +1,19 @@
-<article class="common-button">
-  <p>Upload Button</p>
-  <figure>
-    <button (click)="onUpload()" type="file">
-      <ng-content></ng-content>
-    </button>
-    <input #fileInput (change)="onFileSelected($event)" type="file" style="display: none;">
-   
-    <div class="file-upload-container">
-      @if (fileContent()) {
-        @if (fileType()!.startsWith('image/')) {
-        <img [src]="fileContent()" class="w-[80px]" />
-        <button class="remove-btn" (click)="removeFile()">x</button>
-        }
-        @else {
-        <pre>{{ fileContent() }}</pre>
-        <button class="remove-btn" (click)="removeFile()">x</button>
-        }
-      }@else {
-      <div class="empty"></div>
-      }
-    </div>
-  
-  </figure>
-</article>
+<button (click)="onUpload()" type="file">
+  <ng-content></ng-content>
+</button>
+<input #fileInput (change)="onFileSelected($event)" type="file" style="display: none;">
+
+<div class="file-upload-container">
+  @if (fileContent()) {
+  @if (fileType()!.startsWith('image/')) {
+  <img [src]="fileContent()" class="w-[80px]" />
+  <button class="remove-btn" (click)="removeFile()">x</button>
+  }
+  @else {
+  <pre>{{ fileContent() }}</pre>
+  <button class="remove-btn" (click)="removeFile()">x</button>
+  }
+  }@else {
+  <div class="empty"></div>
+  }
+</div>
