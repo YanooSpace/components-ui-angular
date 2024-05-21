@@ -1,4 +1,4 @@
-<button (click)="onUpload()" type="file">
+<button class="common-btn" (click)="onUpload()" type="file">
   <ng-content></ng-content>
 </button>
 <input #fileInput (change)="onFileSelected($event)" type="file" style="display: none;">
@@ -6,14 +6,14 @@
 <div class="file-upload-container">
   @if (fileContent()) {
   @if (fileType()!.startsWith('image/')) {
-  <img [src]="fileContent()" class="w-[80px]" />
-  <remove-btn (click)="removeFile()"></remove-btn>
+    <img [src]="fileContent()" class="w-[80px]" />
+    <button (click)="removeFile()" class="remove-btn">x</button>
   }
   @else {
-  <pre>{{ fileContent() }}</pre>
-  <remove-btn (click)="removeFile()"></remove-btn>
+    <pre>{{ fileContent() }}</pre>
+    <button (click)="removeFile()" class="remove-btn">x</button>
   }
   }@else {
-  <div class="empty"></div>
+    <div class="empty"></div>
   }
 </div>

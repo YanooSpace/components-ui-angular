@@ -5,6 +5,7 @@ import { AsideComponent } from '../../../components/aside/aside.component';
 import { Button01Component } from '../../../components/buttons/button01/button01.component';
 import { Button02Component } from '../../../components/buttons/button02/button02.component';
 import { Button03Component } from '../../../components/buttons/button03/button03.component';
+import { BackBtnComponent } from '../../../components/buttons/back-btn/back-btn.component';
 
 @Component({
   selector: 'app-buttons-ui',
@@ -12,6 +13,7 @@ import { Button03Component } from '../../../components/buttons/button03/button03
   imports: [
     CommonBoxComponent,
     AsideComponent,
+    BackBtnComponent,
     Button01Component,
     Button02Component,
     Button03Component
@@ -34,5 +36,7 @@ export class ButtonsUiComponent {
     //   error: (error) => console.log('업로드 실패', error)
     //   });
   }
+
+  
 
 }

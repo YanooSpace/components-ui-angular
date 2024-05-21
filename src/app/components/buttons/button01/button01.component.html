@@ -1,9 +1,9 @@
-<button (click)="toggleButton()">
+<button (click)="toggleButton()" class="common-btn">
         <ng-content></ng-content>
 </button>
 @if (isVisible) {
 <div class="common-modal">
         <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry</p>
-        <remove-btn (click)="toggleButton()"></remove-btn>
+        <button (click)="toggleButton()" class="remove-btn">x</button>
 </div>
 }

@@ -4,7 +4,6 @@
     justify-content: center;
     gap: 0.5rem;
     width: 100%;
-    padding: 0 1.25rem;
 }
 .common-box figure {
     display: flex;
@@ -52,4 +51,16 @@
     font-size: 1rem;
     line-height: 1.4rem;
     font-weight: 400;
+}
+
+.remove-btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 1.5rem;
+    height: 1.5rem;
+    background-color: red;
+    color: white;
+    cursor: pointer;
+    border-radius: 100%;
 }

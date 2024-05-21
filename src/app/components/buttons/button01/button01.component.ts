@@ -7,7 +7,7 @@ import { RemoveBtnComponent } from '../remove-btn/remove-btn.component';
   standalone: true,
   imports: [
     CommonModule,
-    RemoveBtnComponent
+    RemoveBtnComponent,
   ],
   templateUrl: './button01.component.html',
   styles: ``

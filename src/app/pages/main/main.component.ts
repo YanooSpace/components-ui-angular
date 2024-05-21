@@ -14,10 +14,19 @@ import { MOCK_CMT } from '../../data/MOCK_CMT';
   ],
   templateUrl: './main.component.html',
   styles: `
+
+  .component-box {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    align-items: center;
+    background: lightgray;
+    padding: 1.5rem;
+    border-radius: 1rem;
+  }
   `
 })
 export class MainComponent {
-  componentBox = 'flex flex-col gap-[0.5rem] items-center bg-slate-100 p-[1.5rem] rounded-[1rem]'
   /**
    * 삽입될 컴포넌트 리스트 목데이터 할당
    * @CType 컴포넌트 타입의 인터페이스 정의
