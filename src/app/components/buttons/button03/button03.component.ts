@@ -1,9 +1,10 @@
-import { Component, ElementRef, EventEmitter, Input, Output, ViewChild, signal } from '@angular/core';
+import { Component, ElementRef, EventEmitter, Output, ViewChild, signal } from '@angular/core';
+import { RemoveBtnComponent } from '../remove-btn/remove-btn.component';
 
 @Component({
   selector: 'app-button03',
   standalone: true,
-  imports: [],
+  imports: [RemoveBtnComponent],
   templateUrl: './button03.component.html',
   styleUrl: './button03.component.scss'
 })

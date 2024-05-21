@@ -20,7 +20,7 @@ import { Button03Component } from '../../../components/buttons/button03/button03
   styleUrl: './buttons-ui.component.scss'
 })
 export class ButtonsUiComponent {
-  buttonList: string[] = ['Modal button', 'Loading button','Upload button']
+  itemList: string[] = ['Modal button', 'Loading button','Upload button']
 
   constructor(private baseURL: HttpClient) {}
 

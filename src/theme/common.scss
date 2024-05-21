@@ -17,22 +17,23 @@
     background-color: #31394C;
     border-radius: 1rem;
 }
-.common-box button {
+
+.common-btn {
     font-size: 1.2rem;
     background-color: #EFF1F5;
     padding: 0.25rem 0.75rem;
     border-radius:.5rem;
 }
-.common-box button:hover {
+.common-btn:hover {
     background-color: #E9BDCF;
 }
-.common-box p {
+.common-btn p {
     padding-left: 0.5rem;
     font-size: 1.2rem;
     font-weight: 500;
 }
 
-.button-modal {
+.common-modal {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -47,7 +48,7 @@
     transform: translate(-50%, -50%);
     border-radius: 1rem;
 }
-.button-modal p {
+.common-modal p {
     font-size: 1rem;
     line-height: 1.4rem;
     font-weight: 400;

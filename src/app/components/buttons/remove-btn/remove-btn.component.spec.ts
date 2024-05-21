@@ -1,18 +1,18 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { ButtonTypeComponent } from './button-type.component';
+import { RemoveBtnComponent } from './remove-btn.component';
 
-describe('ButtonTypeComponent', () => {
-  let component: ButtonTypeComponent;
-  let fixture: ComponentFixture<ButtonTypeComponent>;
+describe('RemoveBtnComponent', () => {
+  let component: RemoveBtnComponent;
+  let fixture: ComponentFixture<RemoveBtnComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      imports: [ButtonTypeComponent]
+      imports: [RemoveBtnComponent]
     })
     .compileComponents();
     
-    fixture = TestBed.createComponent(ButtonTypeComponent);
+    fixture = TestBed.createComponent(RemoveBtnComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

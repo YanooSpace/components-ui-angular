@@ -1,9 +1,10 @@
 import { Component } from '@angular/core';
+import { RemoveBtnComponent } from '../remove-btn/remove-btn.component';
 
 @Component({
   selector: 'app-button02',
   standalone: true,
-  imports: [],
+  imports: [RemoveBtnComponent],
   templateUrl: './button02.component.html',
   styles: ``
 })

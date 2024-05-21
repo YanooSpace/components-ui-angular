@@ -1,7 +1,9 @@
 <button (click)="onLoading()" [disabled]="isLoading">
     <ng-container>
         @if (!isLoading) {
-        <button><ng-content></ng-content></button>
+        <button>
+            <ng-content></ng-content>
+        </button>
         }@else {
         <button>로딩중...</button>
         }
@@ -9,9 +11,9 @@
 </button>
 <ng-container>
     @if(isVisible) {
-    <div class="button-modal">
+    <div class="common-modal">
         <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry</p>
-        <button (click)="toggleButton()">닫기</button>
+        <remove-btn (click)="toggleButton()"></remove-btn>
     </div>
     }
 </ng-container>

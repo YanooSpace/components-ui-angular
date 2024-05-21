@@ -7,11 +7,11 @@
   @if (fileContent()) {
   @if (fileType()!.startsWith('image/')) {
   <img [src]="fileContent()" class="w-[80px]" />
-  <button class="remove-btn" (click)="removeFile()">x</button>
+  <remove-btn (click)="removeFile()"></remove-btn>
   }
   @else {
   <pre>{{ fileContent() }}</pre>
-  <button class="remove-btn" (click)="removeFile()">x</button>
+  <remove-btn (click)="removeFile()"></remove-btn>
   }
   }@else {
   <div class="empty"></div>
