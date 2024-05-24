@@ -19,7 +19,6 @@ import { BackBtnComponent } from '../../../components/buttons/back-btn/back-btn.
     Button03Component
   ],
   templateUrl: './buttons-ui.component.html',
-  styleUrl: './buttons-ui.component.scss'
 })
 export class ButtonsUiComponent {
   itemList: string[] = ['Modal button', 'Loading button','Upload button']

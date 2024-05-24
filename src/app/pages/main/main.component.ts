@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { RouterLink  } from '@angular/router';
+import { RouterLink } from '@angular/router';
 import { HeaderComponent } from '../../components/header/header.component';
 
 import { CType } from '../../interface/component-type.interface';
@@ -10,7 +10,7 @@ import { MOCK_CMT } from '../../data/MOCK_CMT';
   standalone: true,
   imports: [
     RouterLink,
-    HeaderComponent,
+    HeaderComponent
   ],
   templateUrl: './main.component.html',
   styles: `
@@ -33,4 +33,5 @@ export class MainComponent {
    * @MOCK_CMT 컴포넌트 리스트 목데이터
    */
   componentList: CType[] = MOCK_CMT 
+
 }

@@ -1,0 +1,12 @@
+<section class="w-full h-[100vh] flex flex-row">
+    <app-aside [items]="itemList"></app-aside>
+    <section class="flex flex-col flex-1 py-[2rem] gap-[1.5rem] px-[3rem]">
+        <back-btn></back-btn>
+        <common-box [title]="itemList[0]">
+            <app-badge01 class="badge01">
+                <p title>Badge-UI-01</p>
+                <span badge >new</span>
+            </app-badge01>
+        </common-box>
+    </section>
+</section>

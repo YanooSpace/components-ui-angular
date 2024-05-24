@@ -3,13 +3,13 @@ export const MOCK_CMT = [
         id:1,
         title: 'Buttons',
         imageUrl: 'ddd',
-        route: '/buttons-ui'
+        route: '/buttons'
       },
       {
         id:2,
-        title: 'Drop-down',
+        title: 'Badge',
         imageUrl: 'ddd',
-        route: 'buttons'
+        route: '/badge'
       },
       {
         id:3,
