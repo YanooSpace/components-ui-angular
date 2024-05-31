@@ -1,5 +1,5 @@
-<section class="w-full h-full flex flex-row">
-    <app-aside [items]="itemList"></app-aside>
+<!-- <section class="w-full h-full flex flex-row">
+    <app-aside [items]="itemList" class="w-[20%]"></app-aside>
     <section class="flex flex-col flex-1 py-[2rem] gap-[1.5rem] px-[3rem]">
         <back-btn></back-btn>
         <common-box [title]="itemList[0]">
@@ -12,4 +12,10 @@
             <app-button03 (fileUploaded)="handleFileUpload($event)">Upload</app-button03>
         </common-box>
     </section>
-</section>
+</section> -->
+
+<app-layout [items]="itemList" [title]="itemList[0]">
+    @for (button of itemList; track $index) {
+        <app-button01>{{ button }}</app-button01>
+    }
+</app-layout>

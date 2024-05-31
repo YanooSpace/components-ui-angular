@@ -6,7 +6,6 @@ import { RemoveBtnComponent } from '../remove-btn/remove-btn.component';
   standalone: true,
   imports: [RemoveBtnComponent],
   templateUrl: './button03.component.html',
-  styleUrl: './button03.component.scss'
 })
 export class Button03Component {
 

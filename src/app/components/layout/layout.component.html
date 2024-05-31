@@ -1,0 +1,25 @@
+<section class="w-full h-full flex flex-row">
+    <aside class="w-[20%] h-[100vh] bg-slate-100 py-[2rem] flex justify-center">
+        <ul>
+            @for (button of items() ; track $index) {
+            <li class="px-[3rem] py-[0.5rem] hover:bg-red-200">{{ button }}</li>
+            }
+        </ul>
+    </aside>
+    <section class="flex flex-col flex-1 py-[2rem] gap-[1.5rem] px-[3rem]">
+        <back-btn></back-btn>
+        <article class="flex flex-col justify-center gap-[0.5rem] w-[100%]">
+            <p>{{ title() }}</p>
+            @for (item of items(); track $index) {
+            <figure class="relative flex justify-center items-center text-center py-2 h-[15rem] bg-[#31394C] rounded-[1rem]">
+                    <ng-container *ngTemplateOutlet="contentTpl"></ng-container>
+                </figure>
+            }
+        </article>
+    </section>
+</section>
+
+
+<ng-template #contentTpl let-item>
+    <ng-content></ng-content>
+</ng-template>

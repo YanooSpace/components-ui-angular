@@ -5,7 +5,6 @@ import { Component } from '@angular/core';
   standalone: true,
   imports: [],
   templateUrl: './remove-btn.component.html',
-  styleUrl: './remove-btn.component.scss'
 })
 export class RemoveBtnComponent {
 

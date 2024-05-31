@@ -1,19 +1,17 @@
 import { Component } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
+import { LayoutComponent } from '../../../components/layout/layout.component';
 import { CommonBoxComponent } from '../../../components/common-box/common-box.component';
-import { AsideComponent } from '../../../components/aside/aside.component';
 import { Button01Component } from '../../../components/buttons/button01/button01.component';
 import { Button02Component } from '../../../components/buttons/button02/button02.component';
 import { Button03Component } from '../../../components/buttons/button03/button03.component';
-import { BackBtnComponent } from '../../../components/buttons/back-btn/back-btn.component';
 
 @Component({
   selector: 'app-buttons-ui',
   standalone: true,
   imports: [
+    LayoutComponent,
     CommonBoxComponent,
-    AsideComponent,
-    BackBtnComponent,
     Button01Component,
     Button02Component,
     Button03Component

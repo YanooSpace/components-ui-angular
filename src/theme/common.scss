@@ -1,22 +1,3 @@
-.common-box {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    gap: 0.5rem;
-    width: 100%;
-}
-.common-box figure {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    padding : 2rem 0;
-    height: 15rem;
-    position: relative;
-    background-color: #31394C;
-    border-radius: 1rem;
-}
-
 .common-btn {
     font-size: 1.2rem;
     background-color: #EFF1F5;

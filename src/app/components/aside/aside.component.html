@@ -1,7 +1,7 @@
-<aside class="h-full bg-slate-100 py-[2rem]">
-    <div class="flex flex-col items-start">
+<aside class="w-[100%] h-[100vh] bg-slate-100 py-[2rem] flex justify-center">
+    <ul>
         @for (button of items ; track $index) {
-            <button class="px-[3.5rem] py-[.5rem] hover:bg-red-200">{{ button }}</button>
+            <li class="px-[3rem] py-[0.5rem] hover:bg-red-200">{{ button }}</li>
             }
-    </div>
+        </ul>
 </aside>

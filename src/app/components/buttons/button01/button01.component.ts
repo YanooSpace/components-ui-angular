@@ -10,7 +10,6 @@ import { RemoveBtnComponent } from '../remove-btn/remove-btn.component';
     RemoveBtnComponent,
   ],
   templateUrl: './button01.component.html',
-  styles: ``
 })
 export class Button01Component {
 

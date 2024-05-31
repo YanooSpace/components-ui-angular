@@ -5,7 +5,6 @@ import { Component } from '@angular/core';
   standalone: true,
   imports: [],
   templateUrl: './button02.component.html',
-  styles: ``
 })
 export class Button02Component {
 
